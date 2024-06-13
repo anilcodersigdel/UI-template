@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 48px;
+}
+header .border {
+  border: 2.75px solid gray;
+  width: 3%;
+}
+header h2 {
+  font-size: 32px;
+}
+
+.body-content {
+  position: relative;
+}
+.body-content ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.body-content ul li:nth-child(8) {
+  color: blue;
+}
+.body-content ul li:nth-child(20) {
+  color: blue;
+}
+.body-content .first-content {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+}/*# sourceMappingURL=style.css.map */
