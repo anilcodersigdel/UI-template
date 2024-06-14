@@ -3,69 +3,95 @@
     margin: 0;
 }
 
-body{
-    height: 100vh;
-    // width: 100vw;
-    position: relative;
-}
 
-header{
-    display: flex;
-    flex-direction:  column;
-    justify-content: center;
-    align-items: center;
-
-
-    h1{
-        font-size: 48px;
-    }
-
-
-    .border{
-        border: 2.75px solid gray;
-        width: 3%;
-    }
-
-    h2{
-        font-size: 32px;
-    }
-
-}
-
-.body-content{
+.container{
     position: relative;
 
-ul{
-    // font-size: 23px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    // transform: translate(-50% , -50%);
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    li{
-        // list-style-type: disc;
+        h1{
+            font-size: 48px;
+        }
+        h2{
+            font-size: 32px;
+        }
+
+        .horizontal-line{
+            // border: 1.5px solid gray;
+            // width: 3%;
+            width: 35px;
+            height: 4px;
+            background-color: gray;
+        }
+    }
 
 
-        &:nth-child(8) {
-            color: blue;
+    .body-content{
+        position: relative;
+        padding: 0 50px;
+
+        // .dotted-line{
+      
+        //     position: absolute;
+        //     left: 50%;
+        
+        // }
+
+
+        .content{
+            position: absolute;
+         
+            left: 50%;    
+            // border-left: 5px dotted black;
+               
+        .first-one{
+            border-left: 5px dotted black;
            
-          }
-          &:nth-child(20){
-            color: blue;
-          }
+            .border-circle{
+                display: flex;
+                align-items: center;
+                // gap: 20px;
+                .circle{
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-weight: 600;
+                    background-color: black;
+                    color: white;
+                    padding: 17px;
+                    border: 2px solid lightblue;
+
+                }
+                
+                .border{
+                    border-top: 3px solid black;
+                    width: 25%;
+          
+                }
+            }
+
+            .description{
+                padding-left: 20px;
+            }
+
+
+            &.feb{
+                border-left: none;
+                border-right:  5px dotted black;
+                position: absolute;
+                transform: translateX(-11.4rem);
+             
+            }
+        }
+
+        } 
+        
+        
+       
     }
-}
-
-// .body-content:nth-child(3) {
-//     background: red;
-//   }
-
-
-.first-content{
-    position: absolute;
-    left: 60%;
-    top: 50%;
-
-}
-
 }
