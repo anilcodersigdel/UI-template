@@ -1,64 +1,56 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  position: relative;
-}
-.container .title {
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.container .title h1 {
-  font-size: 48px;
+header .horizontal-line {
+  border: 3px solid gray;
+  width: 3%;
 }
-.container .title h2 {
-  font-size: 32px;
-}
-.container .title .horizontal-line {
-  width: 35px;
-  height: 4px;
-  background-color: gray;
-}
-.container .body-content {
+
+.timeline {
   position: relative;
-  padding: 0 50px;
+  max-width: 1200px;
+  margin: 25px 200px;
 }
-.container .body-content .content {
+.timeline:after {
+  content: "";
   position: absolute;
+  height: 100%;
+  border-left: 8px dotted black;
+  top: 0;
   left: 50%;
+  margin-left: -3px;
 }
-.container .body-content .content .first-one {
-  border-left: 5px dotted black;
+.timeline .container {
+  padding: 10px 30px;
+  position: relative;
+  width: 50%;
 }
-.container .body-content .content .first-one .border-circle {
-  display: flex;
-  align-items: center;
+.timeline .container .text-box {
+  background-color: white;
+  position: relative;
+  font-size: 15px;
+  border-radius: 10px;
 }
-.container .body-content .content .first-one .border-circle .circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  text-align: center;
-  font-weight: 600;
-  background-color: black;
+.timeline .container .text-box .month {
+  width: 150px;
+  padding: 5px 20px;
+  background: linear-gradient(to right, blue 20%, black 20%);
   color: white;
-  padding: 17px;
-  border: 2px solid lightblue;
+  font-size: 16px;
+  text-align: right;
 }
-.container .body-content .content .first-one .border-circle .border {
-  border-top: 3px solid black;
-  width: 25%;
+.timeline .container.left-container {
+  left: 0;
 }
-.container .body-content .content .first-one .description {
-  padding-left: 20px;
-}
-.container .body-content .content .first-one.feb {
-  border-left: none;
-  border-right: 5px dotted black;
-  position: absolute;
-  transform: translateX(-11.4rem);
+.timeline .container.right-container {
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,97 +1,70 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+// body {
+    // background-color: #2e364a;
+// }
 
-.container{
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .horizontal-line {
+        border: 3px solid gray;
+        width: 3%;
+    }
+}
+
+.timeline {
     position: relative;
+    max-width: 1200px;
+    margin: 25px 200px;
 
-    .title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        h1{
-            font-size: 48px;
-        }
-        h2{
-            font-size: 32px;
-        }
-
-        .horizontal-line{
-            // border: 1.5px solid gray;
-            // width: 3%;
-            width: 35px;
-            height: 4px;
-            background-color: gray;
-        }
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-left: 8px dotted black;
+        top: 0;
+        left: 50%;
+        margin-left: -3px;
     }
 
-
-    .body-content{
+    .container {
+        padding: 10px 30px;
         position: relative;
-        padding: 0 50px;
+        width: 50%;
 
-        // .dotted-line{
-      
-        //     position: absolute;
-        //     left: 50%;
-        
-        // }
+        .text-box {
+            // padding: 20px 17px;
+            background-color: white;
+            position: relative;
+            font-size: 15px;
+            border-radius: 10px;
 
-
-        .content{
-            position: absolute;
-         
-            left: 50%;    
-            // border-left: 5px dotted black;
-               
-        .first-one{
-            border-left: 5px dotted black;
-           
-            .border-circle{
-                display: flex;
-                align-items: center;
-                // gap: 20px;
-                .circle{
-                    height: 20px;
-                    width: 20px;
-                    border-radius: 50%;
-                    text-align: center;
-                    font-weight: 600;
-                    background-color: black;
-                    color: white;
-                    padding: 17px;
-                    border: 2px solid lightblue;
-
-                }
-                
-                .border{
-                    border-top: 3px solid black;
-                    width: 25%;
-          
-                }
-            }
-
-            .description{
-                padding-left: 20px;
-            }
-
-
-            &.feb{
-                border-left: none;
-                border-right:  5px dotted black;
-                position: absolute;
-                transform: translateX(-11.4rem);
-             
+            .month {
+                width: 150px;
+                padding: 5px 20px;
+                background: linear-gradient(to right, blue 20%, black 20%);
+                color: white;
+                font-size: 16px;
+                text-align: right;
             }
         }
 
-        } 
-        
-        
-       
+        &.left-container {
+            left: 0;
+
+           
+        }
+
+        &.right-container{
+            left: 50%;
+        }
     }
 }
