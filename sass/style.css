@@ -39,17 +39,17 @@ header .horizontal-line {
   position: relative;
   width: 50%;
 }
-.timeline .container .straight-line {
+.timeline .container .right-container-straight-line {
   margin: 23px 0;
   height: 5px;
   width: 250px;
   background-color: black;
   position: relative;
 }
-.timeline .container .straight-line::before {
+.timeline .container .right-container-straight-line::before {
   content: "";
-  height: 15px;
-  width: 15px;
+  height: 17px;
+  width: 17px;
   border-radius: 50%;
   background-color: blue;
   position: absolute;
@@ -58,9 +58,9 @@ header .horizontal-line {
   transform: translate(-50%, -50%);
   z-index: 5;
 }
-.timeline .container .straight-line::after {
-  content: counter(line-counter); /* Use counter value as content */
-  counter-increment: line-counter; /* Increment the counter */
+.timeline .container .right-container-straight-line::after {
+  content: counter(line-counter);
+  counter-increment: line-counter;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -76,6 +76,47 @@ header .horizontal-line {
   align-items: center;
   font-size: 16px;
   color: white;
+  z-index: 99;
+}
+.timeline .container .left-container-straight-line {
+  margin: 23px 0;
+  height: 5px;
+  width: 250px;
+  background-color: black;
+  position: relative;
+  margin-left: auto;
+}
+.timeline .container .left-container-straight-line::before {
+  content: counter(line-counter);
+  counter-increment: line-counter;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: black;
+  border: 3px solid blue;
+  position: absolute;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.timeline .container .left-container-straight-line::after {
+  content: "";
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
   z-index: 99;
 }
 .timeline .container .text-box {
@@ -120,10 +161,6 @@ header .horizontal-line {
   margin-left: auto;
   text-align: left;
   background: linear-gradient(to left, black 20%, blue 20%);
-}
-.timeline .container.left-container .straight-line {
-  margin-left: auto;
-  transform: scaleX(-1);
 }
 .timeline .container.right-container {
   left: 50%;

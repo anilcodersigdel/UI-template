@@ -43,7 +43,7 @@ header {
         width: 50%;
 
 
-     .straight-line{
+     .right-container-straight-line{
         margin: 23px 0;
         height: 5px;
         width: 250px;
@@ -54,8 +54,8 @@ header {
 
         &::before{
             content: "";
-            height: 15px;
-            width: 15px;
+            height: 17px;
+            width: 17px;
             border-radius: 50%;
             background-color: blue;
             position: absolute;
@@ -64,17 +64,19 @@ header {
             top: 50%;
             transform: translate(-50% , -50%);
             z-index: 5;
+
         }
 
         &::after{
-            content: counter(line-counter); /* Use counter value as content */
-            counter-increment: line-counter; /* Increment the counter */
+            content: counter(line-counter); 
+            counter-increment: line-counter; 
             height: 50px;
             width: 50px;
             border-radius: 50%;
             background-color: black;
             border: 3px solid blue;
             position: absolute;
+            // position: relative;
             right: -68px;
             top: 50%;
             transform: translate(-50% , -50%);
@@ -85,9 +87,54 @@ header {
             font-size: 16px;
             color: white;
             z-index: 99;
+        }
+
+     }
 
 
+     .left-container-straight-line{
+        margin: 23px 0;
+        height: 5px;
+        width: 250px;
+        background-color: black;
+        position: relative;
+        margin-left: auto;
 
+
+        &::before{
+            content: counter(line-counter); 
+            counter-increment: line-counter; 
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: black;
+            border: 3px solid blue;
+            position: absolute;
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: white;
+            left: 0;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 5;
+
+        }
+
+        &::after{
+            content: "";
+            height: 17px;
+            width: 17px;
+            border-radius: 50%;
+            background-color: blue;          
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translate(-50% , -50%);         
+            color: black;
+            z-index: 99;
         }
 
      }
@@ -146,20 +193,25 @@ header {
 
             }  
             
-            .straight-line{
-                margin-left: auto;      
-                transform: scaleX(-1);
-            }
+            // .straight-line{
+            //     position: relative;
+            //     margin-left: auto;      
+            //     // transform: scaleX(-1);
+
+            //     // &::after{
+            //     //     // position: relative;
+            //     //     left: -58px;
+
+            //     // }
+            //     // &::before{
+            //     //     // position: absolute;
+            //     //     right: 0;
+            //     // }
             
-        //     .straight-line{
-        //         // position: relative;              
-        //         transform: scaleX(-1);  
-        //         margin-left: auto;
+
+
             
-        //     &::after{
-        //         top: 50%;                
-        //     }
-        // }
+            // }
         }
 
         &.right-container {
