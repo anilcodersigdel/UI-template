@@ -17,6 +17,10 @@ header {
     .horizontal-line {
         border: 3px solid gray;
         width: 3%;
+
+        @media (max-width:768px){
+            width: 10%;
+        }
     }
 }
 
@@ -25,15 +29,23 @@ header {
     max-width: 1200px;
     margin: 25px 200px;
 
+    @media (max-width:768px){
+        margin: 50px auto;
+    }
+
     &:after {
         content: "";
         position: absolute;
         height: 100%;
-        border-left: 8px dotted black;
+        border-left: 7px dotted black;
         top: 0;
         left: 50%;
         margin-left: -3px;
         z-index: -2;
+
+        @media (max-width:768px){
+            left: 30px;
+        }  
       
     }
 
@@ -41,6 +53,11 @@ header {
         margin-top: 33px;
         position: relative;
         width: 50%;
+
+        @media (max-width:768px){
+            width: 100%;
+            padding: 0 32px;
+        }
 
 
      .right-container-straight-line{
@@ -50,6 +67,9 @@ header {
         background-color: black;
         position: relative;
         
+        @media (max-width:768px){
+            width: 220px;
+        }
 
 
         &::before{
@@ -100,6 +120,11 @@ header {
         position: relative;
         margin-left: auto;
 
+        @media (max-width:768px){
+            width: 220px;
+            margin-left: 0;
+        }
+    
 
         &::before{
             content: counter(line-counter); 
@@ -121,6 +146,14 @@ header {
             transform: translate(-50% , -50%);
             z-index: 5;
 
+
+            @media (max-width:768px){
+                // right: -70px;
+                left: 108%;
+
+
+            }
+
         }
 
         &::after{
@@ -135,16 +168,27 @@ header {
             transform: translate(-50% , -50%);         
             color: black;
             z-index: 99;
+
+
+            @media (max-width:768px){
+                left: 0;
+                
+                
+            }
         }
 
      }
 
         .text-box {
-            padding: 20px 25px;
+            padding: 12px 25px;
             background-color:transparent;
             position: relative;
             font-size: 15px;
             margin: 0 10px;
+
+            @media (max-width:768px){
+                font-size: 12px;
+            }
 
             p {
                 padding: 5px 0;
@@ -185,11 +229,21 @@ header {
             left: 0;
             text-align: right;
 
+            @media (max-width:768px){
+                text-align: left;
+            }
+
 
             .month {
                 margin-left: auto;
                 text-align: left;
                 background: linear-gradient(to left, black 20%, blue 20%);
+
+
+
+                @media (max-width:768px){
+                    margin-left: 0;
+                }
 
             }  
             
@@ -216,6 +270,11 @@ header {
 
         &.right-container {
             left: 50%;
+
+
+            @media (max-width:768px){
+                left: 0;
+            }
         }
     }
 }
